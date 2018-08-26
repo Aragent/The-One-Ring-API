@@ -1,0 +1,127 @@
+LM and NPC Macros
+
+adv_attack_1
+/emas @{selected|token_name} attacks @{target|token_name} with a @{selected|repeating_npc-weapon-skills_$0_npc_weapon_skill_name} vs. TN #npc_vs_pc_defense
+
+adv_attack_2
+/emas @{selected|token_name} attacks @{target|token_name} with a @{selected|repeating_npc-weapon-skills_$1_npc_weapon_skill_name} vs. TN #npc_vs_pc_defense
+
+adv_attack_3
+/emas @{selected|token_name} attacks @{target|token_name} with a @{selected|repeating_npc-weapon-skills_$2_npc_weapon_skill_name} vs. TN #npc_vs_pc_defense
+
+adv_attack_4
+/emas @{selected|token_name} attacks @{target|token_name} with a @{selected|repeating_npc-weapon-skills_$3_npc_weapon_skill_name} vs. TN #npc_vs_pc_defense
+
+adv_weapon_1
+/r (1t[lm-feat] + @{selected|repeating_npc-weapon-skills_$0_npc_weapon_rating}t[@{selected|bar3}] + @{selected|repeating_npc-weapon-skills_$0_npc_weapon_skill_favoured} * @{selected|attribute_level} + ?{Modifier|0}) > #npc_vs_pc_defense
+
+adv_weapon_2
+/r (1t[lm-feat] + @{selected|repeating_npc-weapon-skills_$1_npc_weapon_rating}t[@{selected|bar3}] + @{selected|repeating_npc-weapon-skills_$1_npc_weapon_skill_favoured} * @{selected|attribute_level} + ?{Modifier|0}) > #npc_vs_pc_defense
+
+adv_weapon_3
+/r (1t[lm-feat] + @{selected|repeating_npc-weapon-skills_$2_npc_weapon_rating}t[@{selected|bar3}] + @{selected|repeating_npc-weapon-skills_$2_npc_weapon_skill_favoured} * @{selected|attribute_level} + ?{Modifier|0}) > #npc_vs_pc_defense
+
+adv_weapon_4
+/r (1t[lm-feat] + @{selected|repeating_npc-weapon-skills_$3_npc_weapon_rating}t[@{selected|bar3}] + @{selected|repeating_npc-weapon-skills_$3_npc_weapon_skill_favoured} * @{selected|attribute_level} + ?{Modifier|0}) > #npc_vs_pc_defense
+
+npc_vs_pc_defense
+[[@{target|stance} + @{target|parry} + @{target|shield} + @{target|head-gear}]]
+
+npc_weapon_1
+/r (1t[feat] + @{selected|repeating_npc-weapon-skills_$0_npc_weapon_rating}t[@{selected|bar3}] + @{selected|repeating_npc-weapon-skills_$0_npc_weapon_skill_favoured} * @{selected|attribute_level} + ?{Modifier|0}) > #npc_vs_pc_defense
+
+npc_weapon_2
+/r (1t[feat] + @{selected|repeating_npc-weapon-skills_$1_npc_weapon_rating}t[@{selected|bar3}] + @{selected|repeating_npc-weapon-skills_$1_npc_weapon_skill_favoured} * @{selected|attribute_level} + ?{Modifier|0}) > #npc_vs_pc_defense
+
+npc_weapon_3
+/r (1t[feat] + @{selected|repeating_npc-weapon-skills_$2_npc_weapon_rating}t[@{selected|bar3}] + @{selected|repeating_npc-weapon-skills_$2_npc_weapon_skill_favoured} * @{selected|attribute_level} + ?{Modifier|0}) > #npc_vs_pc_defense
+
+npc_weapon_4
+/r (1t[feat] + @{selected|repeating_npc-weapon-skills_$3_npc_weapon_rating}t[@{selected|bar3}] + @{selected|repeating_npc-weapon-skills_$3_npc_weapon_skill_favoured} * @{selected|attribute_level} + ?{Modifier|0}) > #npc_vs_pc_defense
+
+npc_weapon_temp_1
+&{template:default} {{name=@{selected|repeating_npc-weapon-skills_$0_npc_weapon_skill_name}}} {{Damage=@{selected|repeating_npc-weapon-skills_$0_npc_weapon_damage}}} {{Edge = @{selected|repeating_npc-weapon-skills_$0_npc_weapon_edge}}} {{Injury=@{selected|repeating_npc-weapon-skills_$0_npc_weapon_injury}}} {{Called Shot = @{selected|repeating_npc-weapon-skills_$0_npc_weapon_called_shot}}} {{Damage Bonus = @{selected|attribute_level}}} {{Favoured = @{selected|repeating_npc-weapon-skills_$0_npc_weapon_skill_favoured}}}
+
+npc_weapon_temp_2
+&{template:default} {{name=@{selected|repeating_npc-weapon-skills_$1_npc_weapon_skill_name}}} {{Damage=@{selected|repeating_npc-weapon-skills_$1_npc_weapon_damage}}} {{Edge = @{selected|repeating_npc-weapon-skills_$1_npc_weapon_edge}}} {{Injury=@{selected|repeating_npc-weapon-skills_$1_npc_weapon_injury}}} {{Called Shot = @{selected|repeating_npc-weapon-skills_$1_npc_weapon_called_shot}}} {{Damage Bonus = @{selected|attribute_level}}} {{Favoured = @{selected|repeating_npc-weapon-skills_$1_npc_weapon_skill_favoured}}}
+
+npc_weapon_temp_3
+&{template:default} {{name=@{selected|repeating_npc-weapon-skills_$2_npc_weapon_skill_name}}} {{Damage=@{selected|repeating_npc-weapon-skills_$2_npc_weapon_damage}}} {{Edge = @{selected|repeating_npc-weapon-skills_$2_npc_weapon_edge}}} {{Injury=@{selected|repeating_npc-weapon-skills_$2_npc_weapon_injury}}} {{Called Shot = @{selected|repeating_npc-weapon-skills_$2_npc_weapon_called_shot}}} {{Damage Bonus = @{selected|attribute_level}}} {{Favoured = @{selected|repeating_npc-weapon-skills_$2_npc_weapon_skill_favoured}}}
+
+npc_weapon_temp_4
+&{template:default} {{name=@{selected|repeating_npc-weapon-skills_$3_npc_weapon_skill_name}}} {{Damage=@{selected|repeating_npc-weapon-skills_$3_npc_weapon_damage}}} {{Edge = @{selected|repeating_npc-weapon-skills_$3_npc_weapon_edge}}} {{Injury=@{selected|repeating_npc-weapon-skills_$3_npc_weapon_injury}}} {{Called Shot = @{selected|repeating_npc-weapon-skills_$3_npc_weapon_called_shot}}} {{Damage Bonus = @{selected|attribute_level}}} {{Favoured = @{selected|repeating_npc-weapon-skills_$3_npc_weapon_skill_favoured}}}
+
+PC Macros (Dont forget to make these Macros visable to Players)
+
+pc_attack_1
+/em @{selected|token_name} attacks @{target|token_name} with a @{selected|weapon_skill_name_1} vs. TN #pc_vs_npc_defense
+
+pc_attack_1_ranged
+/em @{selected|token_name} attacks @{target|token_name} with a ranged @{selected|weapon_skill_name_2} vs. TN #pc_vs_npc_defense
+
+pc_attack_2
+/em @{selected|token_name} attacks @{target|token_name} with a @{selected|weapon_skill_name_2} vs. TN #pc_vs_npc_defense
+
+pc_attack_2_ranged
+/em @{selected|token_name} attacks @{target|token_name} with a ranged @{selected|weapon_skill_name_2} vs. TN #pc_vs_npc_defense
+
+pc_attack_3
+/em @{selected|token_name} attacks @{target|token_name} with a @{selected|weapon_skill_name_3} vs. TN #pc_vs_npc_defense
+
+pc_attack_3_ranged
+/em @{selected|token_name} attacks @{target|token_name} with a ranged @{selected|weapon_skill_name_3} vs. TN #pc_vs_npc_defense
+
+pc_attack_4
+/em @{selected|token_name} attacks @{target|token_name} with a @{selected|weapon_skill_name_4} vs. TN #pc_vs_npc_defense
+
+pc_attack_4_ranged
+/em @{selected|token_name} attacks @{target|token_name} with a ranged @{selected|weapon_skill_name_4} vs. TN #pc_vs_npc_defense
+
+pc_vs_npc_defense
+[[@{selected|stance} + @{target|parry} + @{target|shield} + @{target|head-gear}]]
+
+pc_weapon_1
+/r (1t[feat] + @{selected|weapon_rating_1}t[@{selected|weary}] + ?{Modifier|0}) > #pc_vs_npc_defense
+
+pc_weapon_2
+/r (1t[feat] + @{selected|weapon_rating_2}t[@{selected|weary}] + ?{Modifier|0}) > #pc_vs_npc_defense
+
+pc_weapon_3
+/r (1t[feat] + @{selected|weapon_rating_3}t[@{selected|weary}] + ?{Modifier|0}) > #pc_vs_npc_defense
+
+pc_weapon_4
+/r (1t[feat] + @{selected|weapon_rating_4}t[@{selected|weary}] + ?{Modifier|0}) > #pc_vs_npc_defense
+
+pc_weapon_temp_1
+&{template:default} {{name=@{selected|weapon_skill_name_1}}} {{Damage=@{selected|weapon_damage_1}}} {{Edge = @{selected|weapon_edge_1}}} {{Injury=@{selected|weapon_injury_1}}} {{Called Shot = @{selected|weapon_called_shot_1}}} {{Damage Bonus = @{selected|damage}}} {{Ranged Bonus = @{selected|ranged}}}
+
+pc_weapon_temp_2
+&{template:default} {{name=@{selected|weapon_skill_name_2}}} {{Damage=@{selected|weapon_damage_2}}} {{Edge = @{selected|weapon_edge_2}}} {{Injury=@{selected|weapon_injury_2}}} {{Called Shot = @{selected|weapon_called_shot_2}}} {{Damage Bonus = @{selected|damage}}} {{Ranged Bonus = @{selected|ranged}}}
+
+pc_weapon_temp_3
+&{template:default} {{name=@{selected|weapon_skill_name_3}}} {{Damage=@{selected|weapon_damage_3}}} {{Edge = @{selected|weapon_edge_3}}} {{Injury=@{selected|weapon_injury_3}}} {{Called Shot = @{selected|weapon_called_shot_3}}} {{Damage Bonus = @{selected|damage}}} {{Ranged Bonus = @{selected|ranged}}}
+
+pc_weapon_temp_4
+&{template:default} {{name=@{selected|weapon_skill_name_4}}} {{Damage=@{selected|weapon_damage_4}}} {{Edge = @{selected|weapon_edge_4}}} {{Injury=@{selected|weapon_injury_4}}} {{Called Shot = @{selected|weapon_called_shot_4}}} {{Damage Bonus = @{selected|damage}}} {{Ranged Bonus = @{selected|ranged}}}
+
+Abilities (make Token Action)
+
+LM
+Name the abilitie the weapon Name or weapon name (favored) Example Bow-of-Horn (Favored)
+#adv_attack_1
+#npc_weapon_temp_1
+#adv_weapon_1
+
+NPC
+Name the abilitie the weapon Name or weapon name (favored) Example (Bows)-(Favored)
+#adv_attack_1
+#npc_weapon_temp_1
+#npc_weapon_1
+
+PC
+Name the abilitie the weapon Name or weapon name (favored) Example Staff(2h)-(Favored)
+#pc_attack_2 
+#pc_weapon_temp_2 
+#pc_weapon_2
+
+The Above abilities Call the macros and yes it could be written in one big macro but its broken up this way to help Troubleshoot in case roll20 breaks something in the future
