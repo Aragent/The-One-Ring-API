@@ -74,7 +74,7 @@ var checkWeary = function (character) {
         var weapon_encumbrance_4 = getAttrByName(characterid, 'weapon_encumbrance_4', 'current');
         var weapon_encumbrance_5 = getAttrByName(characterid, 'weapon_encumbrance_5', 'current');
         var weapon_encumbrance_6 = getAttrByName(characterid, 'weapon_encumbrance_6', 'current');
-        var weapon_encumbrance = parseInt(weapon_encumbrance_1, 10) + parseInt(weapon_encumbrance_2, 10)  + parseInt(weapon_encumbrance_3, 10)  + parseInt(weapon_encumbrance_4, 10);  + parseInt(weapon_encumbrance_5, 10);  + parseInt(weapon_encumbrance_6, 10);
+        var weapon_encumbrance = parseInt(weapon_encumbrance_1, 10) + parseInt(weapon_encumbrance_2, 10)  + parseInt(weapon_encumbrance_3, 10)  + parseInt(weapon_encumbrance_4, 10)  + parseInt(weapon_encumbrance_5, 10)  + parseInt(weapon_encumbrance_6, 10);
         
         // gear encumbrance
         var gear_encumbrance_1 = getAttrByName(characterid, 'gear_encumbrance_1', 'current');
@@ -87,7 +87,7 @@ var checkWeary = function (character) {
         var gear_encumbrance_8 = getAttrByName(characterid, 'gear_encumbrance_8', 'current');
         var gear_encumbrance_9 = getAttrByName(characterid, 'gear_encumbrance_9', 'current');
         var gear_encumbrance_10 = getAttrByName(characterid, 'gear_encumbrance_10', 'current');
-        var gear_encumbrance = parseInt(gear_encumbrance_1, 10) + parseInt(gear_encumbrance_2, 10) + parseInt(gear_encumbrance_3, 10) + parseInt(gear_encumbrance_4, 10) + parseInt(gear_encumbrance_5, 10) + parseInt(gear_encumbrance_6, 10) + parseInt(gear_encumbrance_7, 10) + parseInt(gear_encumbrance_8, 10); + parseInt(gear_encumbrance_9, 10); + parseInt(gear_encumbrance_10, 10);
+        var gear_encumbrance = parseInt(gear_encumbrance_1, 10) + parseInt(gear_encumbrance_2, 10) + parseInt(gear_encumbrance_3, 10) + parseInt(gear_encumbrance_4, 10) + parseInt(gear_encumbrance_5, 10) + parseInt(gear_encumbrance_6, 10) + parseInt(gear_encumbrance_7, 10) + parseInt(gear_encumbrance_8, 10) + parseInt(gear_encumbrance_9, 10) + parseInt(gear_encumbrance_10, 10);
         
         // travel fatigue
         var travel_fatigue = getAttrByName(characterid, 'travel_fatigue', 'current');
